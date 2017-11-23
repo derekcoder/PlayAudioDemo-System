@@ -12,6 +12,7 @@
 		E3197D881FC682500045EA27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3197D861FC682500045EA27 /* Main.storyboard */; };
 		E3197D8A1FC682500045EA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3197D891FC682500045EA27 /* Assets.xcassets */; };
 		E3197D8D1FC682500045EA27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3197D8B1FC682500045EA27 /* LaunchScreen.storyboard */; };
+		E3197D961FC69A300045EA27 /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = E3197D951FC69A300045EA27 /* test.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E3197D891FC682500045EA27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3197D8C1FC682500045EA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3197D8E1FC682500045EA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3197D951FC69A300045EA27 /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		E3197D811FC682500045EA27 /* PlayAudioDemo-System */ = {
 			isa = PBXGroup;
 			children = (
+				E3197D941FC6829C0045EA27 /* Supporting Files */,
 				E3197D821FC682500045EA27 /* AppDelegate.swift */,
 				E3197D841FC682500045EA27 /* ViewController.swift */,
 				E3197D861FC682500045EA27 /* Main.storyboard */,
-				E3197D891FC682500045EA27 /* Assets.xcassets */,
-				E3197D8B1FC682500045EA27 /* LaunchScreen.storyboard */,
-				E3197D8E1FC682500045EA27 /* Info.plist */,
+				E3197D951FC69A300045EA27 /* test.caf */,
 			);
 			path = "PlayAudioDemo-System";
+			sourceTree = "<group>";
+		};
+		E3197D941FC6829C0045EA27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3197D891FC682500045EA27 /* Assets.xcassets */,
+				E3197D8E1FC682500045EA27 /* Info.plist */,
+				E3197D8B1FC682500045EA27 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3197D961FC69A300045EA27 /* test.caf in Resources */,
 				E3197D8D1FC682500045EA27 /* LaunchScreen.storyboard in Resources */,
 				E3197D8A1FC682500045EA27 /* Assets.xcassets in Resources */,
 				E3197D881FC682500045EA27 /* Main.storyboard in Resources */,

@@ -7,19 +7,46 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @IBAction func tapPlayVoiceButton() {
+        var soundID:SystemSoundID = 0
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let path = Bundle.main.path(forResource: "test", ofType: "caf")!
+        let url = URL(fileURLWithPath: path)
+        
+        AudioServicesCreateSystemSoundID(url as CFURL, &soundID)
+        AudioServicesPlaySystemSound(soundID)
+        AudioServicesAddSystemSoundCompletion(soundID, nil, nil, { (soundID, clientData) in
+            print("End of playing voice.")
+        }, nil)
     }
+    
+    @IBAction func tapPlayAlertButton() {
+        var soundID:SystemSoundID = 0
 
-
+        let path = Bundle.main.path(forResource: "test", ofType: "caf")!
+        let url = URL(fileURLWithPath: path)
+        
+        AudioServicesCreateSystemSoundID(url as CFURL, &soundID)
+        AudioServicesPlayAlertSound(soundID)
+        AudioServicesAddSystemSoundCompletion(soundID, nil, nil, { (soundID, clientData) in
+            print("End of playing alert.")
+        }, nil)
+    }
+    
+    @IBAction func tapVibrateButton() {
+        let soundID = SystemSoundID(kSystemSoundID_Vibrate)
+        AudioServicesPlaySystemSound(soundID)
+        AudioServicesAddSystemSoundCompletion(soundID, nil, nil, { (soundID, clientData) in
+            print("End of vibrating.")
+        }, nil)
+    }
 }
 
